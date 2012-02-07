@@ -1,6 +1,7 @@
 require 'ancestry'
 
 class Group < ActiveRecord::Base
+  has_ancestry
 
   belongs_to :leader, :class_name => 'Reader'
   belongs_to :created_by, :class_name => 'User'
